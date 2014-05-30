@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/Tarifes"
+        xmlns:tns="http://www.example.com/Tarifes">
+	<element name="arsenal">
+		<complexType>
+			<sequence>
+				<element name="combatunit" type="tns:CombatUnit" minOccurs="1" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<complexType name="CombatUnit">
+		<sequence>
+			<element name="model" type="string" />
+			<element name="handy" type="tns:Handy" />
+			<element name="origin" type="string" />
+			<element name="ttx" type="tns:TTX" />
+		</sequence>
+		<attribute name="serial" type="ID" use="required" />
+	</complexType>
+	
+    <simpleType name="Handy">
+        <restriction base="string">
+            <enumeration value="onehand"></enumeration>
+            <enumeration value="twohand"></enumeration>
+        </restriction>
+    </simpleType>
+	
+	<complexType name="TTX">
+        <sequence>
+            <element name="distance" type="integer" minOccurs="1" maxOccurs="1" />
+            <element name="optics" type="boolean" minOccurs="1" maxOccurs="1" />
+        </sequence>
+    </complexType>
+</schema>

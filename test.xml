@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:arsenal xmlns:tns="http://www.example.com/Tarifes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/Tarifes myschema.xsd">
+  <combatunit serial="SR15481A">
+    <model>colt</model>
+    <handy>onehand</handy>
+    <origin>USA</origin>
+    <ttx>
+      <distance>25</distance>
+      <optics>false</optics>
+    </ttx>
+  </combatunit>
+  <combatunit serial="SR2347112">
+    <model>M16</model>
+    <handy>twohand</handy>
+    <origin>USA</origin>
+    <ttx>
+      <distance>625</distance>
+      <optics>true</optics>
+    </ttx>
+  </combatunit>
+</tns:arsenal>
